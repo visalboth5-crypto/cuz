@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#183c2b">
+  <meta name="description" content="CUZ BOSS is a thoughtful guide to cannabis, considered products, and a closer connection to nature. Adults only.">
+  <title>CUZ BOSS — Cannabis, considered</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="age-gate" id="age-gate" role="dialog" aria-modal="true" aria-labelledby="gate-title">
+    <div class="gate-card">
+      <a class="brand brand-gate" href="#" aria-label="CUZ BOSS home"><span class="brand-mark">C</span><span>CUZ <b>BOSS</b></span></a>
+      <span class="eyebrow">A more grounded kind of cannabis</span>
+      <h1 id="gate-title">Are you <span id="legal-age">21</span> or older?</h1>
+      <p>Our space is for adults. Please confirm your age to continue.</p>
+      <div class="gate-actions">
+        <button class="button button-dark" id="age-yes">Yes, I’m of legal age</button>
+        <button class="button button-outline" id="age-no">No, take me back</button>
+      </div>
+      <small>By entering, you agree to our age and responsible-use policy.</small>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="utility-bar">A little more nature in your day <span>Thoughtful cannabis. Rooted in care.</span></div>
+    <div class="nav-wrap">
+      <a class="brand" href="#home" aria-label="CUZ BOSS home"><span class="brand-mark">C</span><span>CUZ <b>BOSS</b></span></a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <a href="#shop">Shop</a><a href="#learn">Learn</a><a href="#nature">Nature</a><a href="#journal">Journal</a><a href="#about">Our story</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-button" id="search-toggle" aria-label="Open search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button>
+        <button class="icon-button account-button" id="account-open" aria-label="Account"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 21c.7-4.1 3-6.2 7-6.2s6.3 2.1 7 6.2"/></svg></button>
+        <button class="cart-button" id="cart-open" aria-label="Open cart">Bag <span id="cart-count">0</span></button>
+      </div>
+    </div>
+    <div class="search-panel" id="search-panel" hidden>
+      <label for="site-search">What are you looking for?</label>
+      <div class="search-field"><input type="search" id="site-search" placeholder="Try “terpenes” or “flower”"><button id="search-submit">Search</button></div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="hero-image" role="img" aria-label="Sunlight on a lush green field"></div>
+      <div class="hero-content">
+        <span class="eyebrow eyebrow-light"><i></i> Stay curious. Stay grounded.</span>
+        <h1>Good things<br>grow <em>slowly.</em></h1>
+        <p>Thoughtful cannabis for a more connected kind of everyday. Learn a little, explore at your own pace, and find what feels right for you.</p>
+        <div class="hero-buttons"><a class="button button-cream" href="#shop">Explore the collection <span>↗</span></a><a class="text-link light-link" href="#learn">New to cannabis? Start here <span>→</span></a></div>
+      </div>
+      <div class="hero-caption"><span>01 / 04</span><span>Grown with intention, always.</span></div>
+      <div class="hero-stamp"><span>ROOTED IN</span><b>GOOD<br>GROWING</b><span>SINCE 2018</span></div>
+    </section>
+
+    <section class="intro section-pad">
+      <div class="intro-label"><span class="leaf-icon">✳</span> A different point of view</div>
+      <div class="intro-copy"><h2>More than a product.<br><em>A relationship with nature.</em></h2><p>We believe a little knowledge goes a long way. CUZ BOSS brings together considered products, honest education, and the people who grow with care—so you can make choices that feel like your own.</p><a href="#about" class="text-link">Get to know us <span>→</span></a></div>
+      <div class="intro-number">01<span> / 03</span></div>
+    </section>
+
+    <section class="shop-section section-pad" id="shop">
+      <div class="section-heading">
+        <div><span class="eyebrow">The considered collection</span><h2>Find your <em>own</em> kind of calm.</h2></div>
+        <a class="text-link desktop-link" href="#shop-grid">View the collection <span>→</span></a>
+      </div>
+      <p class="demo-notice">Sample catalog for demonstration only. No cannabis is sold here; products, prices, potency, and lab details are illustrative.</p>
+      <div class="shop-toolbar">
+        <div class="filter-tabs" role="group" aria-label="Filter products by category">
+          <button class="filter-tab active" data-category="all">All products</button><button class="filter-tab" data-category="flower">Flower</button><button class="filter-tab" data-category="edibles">Edibles</button><button class="filter-tab" data-category="oils">Oils & tinctures</button><button class="filter-tab" data-category="pre-rolls">Pre-rolls</button><button class="filter-tab" data-category="accessories">Accessories</button>
+        </div>
+        <label class="sort-select">Sort by <select id="sort-select" aria-label="Sort products"><option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="strain">Strain type</option><option value="potency">Potency</option></select></label>
+      </div>
+      <div class="product-grid" id="shop-grid" aria-live="polite"></div>
+      <div class="shop-foot"><span>Thoughtfully selected, transparently shared.</span><a class="text-link" href="#learn">How to choose <span>→</span></a></div>
+    </section>
+
+    <section class="learn-section section-pad" id="learn">
+      <div class="learn-photo" role="img" aria-label="A green plant growing in a sunlit greenhouse"></div>
+      <div class="learn-copy"><span class="eyebrow eyebrow-light">The more you know</span><h2>Curiosity is a<br>good place to <em>start.</em></h2><p>There’s no one-size-fits-all way to explore cannabis. Our straightforward guides can help you understand the basics, ask better questions, and make informed decisions.</p><a href="#guide" class="button button-cream">Explore the beginner’s guide <span>↗</span></a><div class="learn-note"><span>02 / 03</span><span>Good information grows good choices.</span></div></div>
+    </section>
+
+    <section class="guide-section section-pad" id="guide">
+      <div class="guide-heading"><span class="eyebrow">A grounded guide</span><h2>Cannabis, <em>without</em><br>the guesswork.</h2><p>Clear answers to the questions people actually ask. Start anywhere.</p></div>
+      <div class="guide-list">
+        <details><summary><span>01</span><b>THC & CBD, explained</b><i>+</i></summary><p>THC and CBD are two of many cannabinoids in the cannabis plant. THC can produce intoxicating effects; CBD is not intoxicating. Products and individual responses vary, and neither percentage alone predicts how something will feel.</p></details>
+        <details><summary><span>02</span><b>Indica, sativa & hybrid</b><i>+</i></summary><p>These labels are commonly used to describe plant varieties, but they are not reliable guarantees of a particular effect. A product’s cannabinoid and terpene profile, dose, and your own body all matter.</p></details>
+        <details><summary><span>03</span><b>Terpenes & flavor notes</b><i>+</i></summary><p>Terpenes are aromatic compounds found in many plants, including cannabis. They contribute to aroma and flavor. Research into their effects is ongoing, so treat tasting notes as descriptions—not promises.</p></details>
+        <details><summary><span>04</span><b>Methods & mindful dosing</b><i>+</i></summary><p>Inhaled and ingested products can have very different onset times and durations. If you choose to consume, start with a low dose, wait before considering more, and follow the product label and local guidance.</p></details>
+        <details><summary><span>05</span><b>Safety, health & the law</b><i>+</i></summary><p>Cannabis is not for everyone. Avoid use if pregnant or breastfeeding, keep products locked away from children and pets, and never drive or operate machinery after use. Laws vary by location; check local rules and speak with a healthcare professional about health questions.</p></details>
+      </div>
+    </section>
+
+    <section class="nature-section section-pad" id="nature">
+      <div class="section-heading nature-heading"><div><span class="eyebrow">Rooted in the bigger picture</span><h2>Better growing.<br><em>Better ground.</em></h2></div><p>Healthy plants begin with healthy soil. We’re learning from growers who respect the land, reduce waste, and work with the rhythms of the natural world.</p></div>
+      <div class="nature-grid">
+        <article class="nature-card nature-large"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1200&q=85" alt="Rolling green fields in warm afternoon light" loading="lazy"><div class="nature-overlay"><span>01 — In good company</span><h3>Growing in harmony<br>with the land.</h3><a href="#about" aria-label="Learn about our grower partners">↗</a></div></article>
+        <article class="nature-card"><img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=900&q=85" alt="Deer standing among green trees" loading="lazy"><div class="nature-overlay"><span>02 — Nature knows best</span><h3>Small choices.<br>Living ecosystems.</h3><a href="#about" aria-label="Learn about our values">↗</a></div></article>
+        <article class="nature-card hemp-card"><div class="hemp-art">✳</div><span>03 — From seed to soil</span><h3>One plant,<br>many possibilities.</h3><p>Hemp has a long history of use in textiles, paper, food, and building materials. Discover the potential of this versatile plant.</p><a class="text-link light-link" href="#journal">Read about hemp <span>→</span></a></article>
+      </div>
+      <div class="gallery-strip" aria-label="Nature gallery"><img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=500&q=80" alt="Sunlit forest path" loading="lazy"><img src="https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=500&q=80" alt="Golden light across a meadow" loading="lazy"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=500&q=80" alt="Mountain valley with a river" loading="lazy"><img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=500&q=80" alt="Green leaves reaching toward the light" loading="lazy"></div>
+    </section>
+
+    <section class="journal-section section-pad" id="journal">
+      <div class="section-heading"><div><span class="eyebrow">Field notes & fresh thinking</span><h2>Stories worth <em>sitting with.</em></h2></div><a class="text-link desktop-link" href="#journal-grid">Visit the journal <span>→</span></a></div>
+      <div class="journal-tools"><label class="journal-search"><span class="sr-only">Search articles</span><input id="journal-search" type="search" placeholder="Search the journal"></label><label class="sort-select">Browse <select id="journal-category" aria-label="Filter articles by category"><option value="all">All topics</option><option value="learn">Learn</option><option value="nature">Nature</option><option value="wellbeing">Wellbeing</option></select></label></div>
+      <div class="journal-grid" id="journal-grid">
+        <article class="journal-card" data-category="learn"><a href="#guide" class="journal-image"><img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80" alt="Close-up of a leaf in soft sunlight" loading="lazy"><span>LEARN / 6 MIN READ</span></a><h3><a href="#guide">A kinder way to begin: cannabis basics, made clear</a></h3><p>Good questions are a great first step. Here’s a grounded introduction to the plant.</p></article>
+        <article class="journal-card" data-category="nature"><a href="#nature" class="journal-image"><img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=900&q=80" alt="Green mountain landscape beneath low clouds" loading="lazy"><span>NATURE / 4 MIN READ</span></a><h3><a href="#nature">What does it mean to grow with the land?</a></h3><p>Meet the small, thoughtful choices behind more responsible cultivation.</p></article>
+        <article class="journal-card" data-category="wellbeing"><a href="#learn" class="journal-image"><img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=900&q=80" alt="Green foliage seen from above" loading="lazy"><span>WELLBEING / 5 MIN READ</span></a><h3><a href="#learn">Slow down, tune in: building your own mindful ritual</a></h3><p>Make room for intention, listen to yourself, and let your choices be yours.</p></article>
+      </div>
+    </section>
+
+    <section class="about-section section-pad" id="about">
+      <div class="about-mark">C<span>✳</span></div>
+      <div class="about-copy"><span class="eyebrow">A little about us</span><h2>Good people.<br>Good plants.<br><em>Good intentions.</em></h2><p>CUZ BOSS started with a simple idea: cannabis deserves a more thoughtful conversation. We bring growers, educators, and curious adults together around a shared respect for the plant—and the planet it grows on.</p><a class="button button-dark" href="#contact">Say hello <span>↗</span></a></div>
+      <div class="about-values"><div><span>01</span><b>Honest by nature</b><p>Clear information, no big promises.</p></div><div><span>02</span><b>People before product</b><p>Education and wellbeing come first.</p></div><div><span>03</span><b>Rooted in respect</b><p>For the land, the plant, and each other.</p></div></div>
+    </section>
+
+    <section class="contact-section section-pad" id="contact">
+      <div class="contact-copy"><span class="eyebrow eyebrow-light">Good conversations start here</span><h2>Questions? We’re<br>all <em>ears.</em></h2><p>Our friendly team is here to help with product questions, the learning library, or anything else on your mind.</p><div class="contact-detail"><span>Say hello</span><a href="mailto:hello@cuzboss.example">hello@cuzboss.example</a></div><div class="contact-detail"><span>Opening hours</span><b>Mon–Sat, 10am–6pm</b></div>      <div class="contact-detail"><span>Find us</span><b>Location & map coming soon</b></div></div>
+      <form class="contact-form" id="contact-form"><label>Your name<input name="name" autocomplete="name" required placeholder="How should we address you?"></label><label>Email address<input name="email" type="email" autocomplete="email" required placeholder="you@example.com"></label><label>What’s on your mind?<textarea name="message" rows="4" required placeholder="Tell us a little more..."></textarea></label><button class="button button-cream" type="submit">Send a note <span>↗</span></button><p class="form-message" id="contact-message" aria-live="polite"></p></form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top"><a class="brand brand-footer" href="#home"><span class="brand-mark">C</span><span>CUZ <b>BOSS</b></span></a><p>Stay in the know,<br>and close to nature.</p><form class="newsletter-form" id="newsletter-form"><label for="newsletter-email">A good note in your inbox. No noise.</label><div><input id="newsletter-email" type="email" required placeholder="Your email address"><button aria-label="Subscribe" type="submit">→</button></div><small id="newsletter-message" aria-live="polite"></small></form></div>
+    <div class="footer-bottom"><span>© 2026 CUZ BOSS. Rooted in good.</span><nav aria-label="Footer navigation"><a href="#learn">Learn</a><a href="#contact">Contact</a><a href="#about">Privacy</a><a href="#about">Terms</a></nav><span class="disclaimer">For adults only. Please consume responsibly.</span></div>
+  </footer>
+
+  <div class="scrim" id="scrim" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true" inert>
+    <div class="drawer-header"><div><span class="eyebrow">Your selection</span><h2 id="cart-title">Your bag <span id="drawer-count">(0)</span></h2></div><button class="close-button" data-close aria-label="Close bag">×</button></div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-bottom"><div class="cart-subtotal"><span>Subtotal</span><b id="cart-subtotal">$0.00</b></div><p>Taxes and eligibility are confirmed in person. This demo does not place real orders.</p><button class="button button-dark full-button" id="checkout-open">Continue to checkout <span>→</span></button><a class="text-link" href="#shop" data-close>Continue exploring</a></div>
+  </aside>
+
+  <dialog class="app-dialog" id="checkout-dialog" aria-labelledby="checkout-title"><button class="close-button dialog-close" data-dialog-close aria-label="Close checkout">×</button><span class="eyebrow">Demo checkout</span><h2 id="checkout-title">One more thoughtful step.</h2><p class="dialog-intro">This sample checkout does not collect payment or place an order. Licensed retailers must verify eligibility and comply with local requirements.</p><form id="checkout-form"><fieldset><legend>Age & ID verification</legend><label class="check-row"><input type="checkbox" required> I confirm I am of legal age and will present valid government-issued ID to a licensed retailer.</label></fieldset><fieldset><legend>Preferred fulfillment</legend><label class="radio-row"><input type="radio" name="fulfillment" value="pickup" required> Pickup</label><label class="radio-row"><input type="radio" name="fulfillment" value="delivery"> Delivery, where legally available</label></fieldset><div class="checkout-summary"><span>Demo subtotal</span><b id="checkout-total">$0.00</b></div><button class="button button-dark full-button" type="submit">Review demo request <span>→</span></button><p class="form-message" id="checkout-message" aria-live="polite"></p></form></dialog>
+
+  <dialog class="app-dialog product-dialog" id="product-dialog" aria-labelledby="product-title"><button class="close-button dialog-close" data-dialog-close aria-label="Close product details">×</button><div id="product-detail"></div></dialog>
+  <dialog class="app-dialog account-dialog" id="account-dialog" aria-labelledby="account-title"><button class="close-button dialog-close" data-dialog-close aria-label="Close account">×</button><span class="eyebrow">Your CUZ BOSS</span><h2 id="account-title">A space of your own.</h2><p class="dialog-intro">Sign in is coming soon. For now, save products to your wishlist on this device.</p><div id="wishlist-items" class="wishlist-items"></div><button class="button button-dark full-button" data-dialog-close>Sounds good</button></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
